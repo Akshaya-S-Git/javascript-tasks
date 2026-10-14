@@ -44,12 +44,13 @@ input:hover{
 h3 {
     width: 800px;
     margin: 40px auto 0;
-    font-size: x-large;
+    font-size: 25px;
 }
-#count {
-     width: 100px;height: 40px;margin-left: 10px;border-radius: 20px;
+#count,  #addcount, #removecount {
+    width: 180px;height: 40px;margin-left: 10px;border-radius: 20px;
     font-size: 18px;color: rgb(55, 35, 75);
 }
+
 #c {
      width: 250px;height: 60px;position: absolute;bottom: 10px; border-radius: 20px;
     font-size: 18px;color: rgb(55, 35, 75);
