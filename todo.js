@@ -19,8 +19,10 @@ function taskinput(){
     let name=""
     let taskin=document.getElementById("task1")
     name=taskin.value.trim()
-    if(name==="") 
+    if(name===""){
+        alert("ENTER A VALID TASK")
         return
+    }
     list(name)
     taskin.value=""
 }
