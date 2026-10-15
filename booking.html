@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="booking .css">
+</head>
+<body>
+    <header>BOOK YOUR TICKETS</header><br><br>
+    <h3>MOVIES AVAILABLE</h3>
+    <div class="image">
+        <img src="jailer2.png" alt="I1">
+        <img src="anbilavan.png" alt="I2">
+        <img src="BATHTHA.png" alt="I3">
+        <img src="AVENGERS.png" alt="I4">
+    </div>
+    <form id="bookingform">
+    <div class="container">
+        <div class="field">
+            <label>CHOOSE A MOVIE</label>
+            <select id="movie">
+                <option></option>
+                <option value="JAILER">JAILER</option>
+                <option value="ANBIL AVAN">ANBIL AVAN</option>
+                <option value="BATHTHA">BATHTHA</option>
+                <option value="AVENGERS">AVENGERS</option>
+            </select>
+            <span id="movieerror" class="error"></span>
+        </div>
+
+        <div class="field">
+            <label>SHOW TIME</label>
+            <select id="showtime">
+                <option></option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+            </select>
+            <span id="timeerror" class="error"></span>
+        </div>
+
+        <div class="field">
+            <label>PRICE</label>
+            <select id="price">
+                <option></option>
+                <option value="200">CLASS1 : Rs.200</option>
+                <option value="150">CLASS2 : Rs.150</option>
+            </select>
+            <span id="priceerror" class="error"></span>
+        </div>
+
+        <div class="field">
+            <label>PHONE NUMBER</label>
+            <input type="number" id="phone">
+            <span id="phoneerror" class="error"></span>
+        </div>
+
+        <div class="field">
+            <label>EMAIL</label>
+            <input type="email" id="email">
+            <span id="emailerror" class="error"></span>
+        </div>
+
+        <div class="field">
+            <label>NO.OF TICKETS</label>
+            <input type="number" id="quantity">
+            <span id="qtyerror" class="error"></span>
+        </div>
+
+        <p class="size1">Total Price: ₹<span id="total">0</span></p>
+        <button type="submit" class="size2">BOOK TICKETS</button>
+
+    </div>
+</form>
+    <button onclick="reset()">RESET</button>
+<div id="popup" class="popup-overlay">
+    <div class="popup-box">
+        <h2>BOOKING CONFIRMED</h2>
+        <div id="popup-details"></div>
+        <button type="button" id="popup-close">CLOSE</button>
+    </div>
+</div>
+    
+    <script src="booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body {background: #0a0b17;color: #eee;overflow-x: hidden;}
+
+header {width: 100%;padding: 24px;text-align: center;font-size: 27px;font-weight: bolder;letter-spacing: 2px;color: black;
+    background: linear-gradient(90deg, rgb(245, 179, 1), rgb(142, 10, 107));}
+
+.image {display: grid;grid-template-columns: repeat(4,2fr);gap: 20px;padding: 30px;}
+h3 {text-align: center;letter-spacing: 3px;color:rgb(245, 179, 1,0.8);font-size: 25px;}
+.image img {width: 100%;height: 500px;object-fit: cover;border-radius: 12px;background: #1c1d33;}
+.image img:hover {transform: translateY(-12px);box-shadow: 0 15px 30px rgb(142, 10, 107,0.7);}
+
+.container {display: grid;grid-template-columns: 1fr 1fr;gap: 20px;width: auto;margin: 10px auto 20px;padding: 30px;
+    background: #1c1d33;border-radius: 16px;}
+.container:hover {transform: translateY(-6px);box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);}
+
+.field { display: flex; flex-direction: column; gap: 5px; }
+.size1 { grid-column: 1 / -1;color: rgb(245, 179, 1);font-weight: bolder;font-size: large; }
+.size2 { grid-column: 1 / -1;color: black;font-weight: bolder;font-size: large; }
+label { font-size: 15px; letter-spacing: 1px; color: #aaa; }
+
+select, input {padding: 15px;border-radius: 8px;border: 1px solid #333556;background: #0f1020;
+  color: #c9c9d6;font-weight: bolder;}
+select:hover, input:hover,select:focus, input:focus {transform: translateY(-2px);border-color: rgb(245, 179, 1,0.5);}
+
+.error { color: #e46464; font-size: 12px;}
+
+button {padding: 12px;border-radius: 8px;color: black; background: linear-gradient(90deg, rgb(245, 179, 1), rgb(142, 10, 107,0.7));font-weight: 700;letter-spacing: 2px;cursor: pointer;}
+button:hover {transform: translateY(-4px);box-shadow: 0 8px 20px rgba(229, 9, 20, 0.5);}
+
+.image img, .container, select, input, button { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;}
+
+body > button { display: block; margin: 0 auto 40px; padding: 10px 30px;font-weight: bolder;font-size: large;}
+
+.popup-overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;
+  height: 100%;font-size: large; background: rgba(0, 0, 0, 0.5);justify-content: center;align-items: center;
+}
+
+.popup-overlay.show {display: flex;}
+
+.popup-box {background: #1c1d33;width: 500px;padding: 30px;
+  border-radius: 16px;border: 1px solid rgb(245, 179, 1);}
+
+.popup-box h2 {text-align: center;color: rgb(245, 179, 1);margin-bottom: 20px;}
+
+.popup-box p {display: flex;justify-content: space-between;padding: 8px 0;}
+
+.popup-box button {width: 100%;margin-top: 20px;}
+
+@media (max-width: 700px) {
+  .image { grid-template-columns: repeat(2, 1fr); }
+  .container { grid-template-columns: 1fr; }
+}
