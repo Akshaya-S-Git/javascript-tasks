@@ -15,7 +15,6 @@ let qtyerror = document.getElementById("qtyerror")
 let popup = document.getElementById("popup")
 let popupDetails = document.getElementById("popup-details")
 
-let bookings = []
 let mail = ""
 
 function calculatePrice() {
@@ -94,8 +93,6 @@ bookingForm.addEventListener("submit", function (event) {
         email: email.value.trim(),
         total: amount
     }
-
-    bookings.push(booking)
 
     popupDetails.innerHTML =
         `<p><span>Movie</span><span>${booking.movie}</span></p>` +
