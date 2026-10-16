@@ -43,7 +43,7 @@ function count(){
 let index=0
 
 function color(){
-    let colors=["rgb(232, 221, 251)","rgb(194, 194, 243)","rgb(243, 229, 245)"]
+    let colors=["rgb(255, 204, 102)","rgb(144, 238, 208)","rgb(255, 182, 193)"]
     document.body.style.backgroundColor=colors[index]
     index=(index+1)%colors.length
 }
