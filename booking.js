@@ -15,6 +15,7 @@ let qtyerror = document.getElementById("qtyerror")
 let popup = document.getElementById("popup")
 let popupDetails = document.getElementById("popup-details")
 
+let bookings = []
 let mail = ""
 
 function calculatePrice() {
@@ -36,7 +37,6 @@ function clearErrors() {
     movieerror.textContent = ""
     timeerror.textContent = ""
     priceerror.textContent = ""
-    phoneerror.textContent = ""
     emailerror.textContent = ""
     qtyerror.textContent = ""
 }
@@ -93,7 +93,7 @@ bookingForm.addEventListener("submit", function (event) {
         email: email.value.trim(),
         total: amount
     }
-
+    
     popupDetails.innerHTML =
         `<p><span>Movie</span><span>${booking.movie}</span></p>` +
         `<p><span>Show Time</span><span>${booking.showtime}</span></p>` +
@@ -119,6 +119,13 @@ bookingForm.addEventListener("submit", function (event) {
         "mailto:" + booking.email +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(message)
+
+    bookings.push(booking)
+    console.log("Booking details:", booking)
+    let result = bookings.filter(function(b) {
+        return b.quantity > 2
+    })
+    console.log("Filtered bookings:", result)
 })
 
 function closePopup() {
