@@ -1,0 +1,15 @@
+body {font-size: 20px;background-color: #F4F6F9;color: #1E293B;}
+header {border: 2px solid black;padding: 50px;text-align: center;font-size: 30px;
+    font-weight: bold;margin-bottom: 20px;background-color: #1E3A5F;color: #FFFFFF;}
+.grid {display: grid;grid-template-columns: 1fr 1fr;gap: 15px;margin-bottom: 20px; background-color: #E8EEF5;}
+.grid h4 {grid-column: 1 / -1;text-align: center;}
+.grid div, section {border: 2px solid black;padding: 30px;background-color: #FFFFFF;}
+#details {border: 2px solid black;padding: 20px;margin-bottom: 20px;background-color: #FFFFFF;}
+.filter {border: 2px solid black;padding: 20px;margin-top: 20px;background-color: #FFFFFF;}
+table {border-collapse: collapse;width: 100%;margin-top: 15px;}
+th, td {border: 1px solid black;padding: 10px;text-align: center;background-color: #1E3A5F;
+    color: #FFFFFF;}
+td {background-color: #FFFFFF;color: #1E3A5F;}
+button {padding: 10px; background-color: #475569;color: #FFFFFF;border: none;}
+button:hover {background-color: #334155;transform: translateY(-10px);}
+#budgetwarning{color: green}

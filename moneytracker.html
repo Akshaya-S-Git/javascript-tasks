@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="moneytracker.css">
+</head>
+<body>
+    <header>MONEY TRACKER</header>
+    <div class="grid">
+        <h4>MONTHLY DASHBOARD</h4>
+        <div>
+            <label>MONTHLY SPENDING</label>
+            <span id="monthlyspending">0</span>
+        </div>
+        <div>
+            <label>NUMBER OF EXPENSE</label>
+            <span id="numberofexpense">0</span>
+        </div>
+        <div>
+            <label>MONTHLY BUDGET</label>
+            <input type="number" id="monthlybudget">
+            <button ID="set">SET BUDGET</button>
+        </div>
+        <div>
+            <label>REMAINING</label>            
+        <span id="remaining">0</span>
+        </div>
+        <section id="conversion">
+            <h3>INR to USD Conversion</h3>
+            <p>Monthly Spending: ₹<span id="inrAmount">0</span></p>
+            <p>Spending in USD: $<span id="usdAmount">0.00</span></p>
+            <button id="convert">Convert to USD</button>
+            <p id="conversionMessage"></p>
+        </section>
+        <div>Budget Warning
+            <p id="budgetwarning">Budget Warning!</p>
+        </div>
+    </div>
+    <form id="details">
+        <label>NAME OF THE EXPENSE</label>
+        <input type="text" id="name" required>
+        <label>AMOUNT</label>
+        <input type="number" id="amount" required>
+        <label>CATEGORY</label>
+        <select id="category" required>
+            <option value=""></option>
+            <option value="FOOD">FOOD</option>
+            <option value="TRAVEL">TRAVEL</option>
+            <option value="SHOPPING">SHOPPING</option>
+            <option value="OTHER">OTHER</option>
+        </select>
+        <label>DATE</label>
+        <input type="date" id="date" required>
+        <button type="submit" id="add">ADD</button>
+    </form>
+    <div class="filter">
+        <label>Search by name</label>
+        <input type="text" placeholder="search the expense" id="search">
+        <label>Search by category</label>
+        <select id="categoryfilter">
+            <option value=""></option>
+            <option value="FOOD">FOOD</option>
+            <option value="TRAVEL">TRAVEL</option>
+            <option value="SHOPPING">SHOPPING</option>
+            <option value="OTHER">OTHER</option>
+        </select>
+        <label>Search by date</label>
+        <select id="sortdate">
+            <option value=""></option>
+            <option value="new">Newest first</option>
+            <option value="old">Oldest first</option>
+        </select>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>NAME</th>
+                <th>AMOUNT</th>
+                <th>CATEGORY</th>
+                <th>DATE</th>
+                <th>ACTION</th>
+            </tr>
+            </thead>
+            <tbody id="table">
+        
+            </tbody>
+        </table>  
+        <p>TOTAL Rs.<span id="total">0</span></p>
+    </div><br>
+    <button id="exportjson">EXPORT JSON</button>
+    <input type="file" id="importjson" accept=".json">
+    <button type="button" id="import">Import JSON</button>
+    <button id="clearall">Clear All</button>
+    <script type="module" src="moneytracker.js"></script>
+</body>
+</html>
